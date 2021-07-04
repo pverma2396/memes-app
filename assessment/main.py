@@ -149,9 +149,9 @@ class XMemeAssessment(TestCase):
         self.assertIn(response.status_code, self.POSITIVE_STATUS_CODES)
         data = self.decode_and_load_json(response)
         # print('get single: ', data)
-        self.assertEqual(data['name'], 'crio-user' + "9999")
-        self.assertEqual(data['caption'], 'crio-meme' + "9999")
-        self.assertEqual(data['url'], self.SAMPLE_URL + self.FIRST_POST)
+        self.assertEqual(data["caption"], 'crio-meme' + "9999")
+        self.assertEqual(data["name"], 'crio-user' + "9999")
+        self.assertEqual(data["url"], self.SAMPLE_URL + self.FIRST_POST)
 
 
     @pytest.mark.run(order=4)
